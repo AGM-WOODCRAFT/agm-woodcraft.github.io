@@ -52,6 +52,7 @@ const ContactInfo = () => (
         href="tel:+48601351699"
       >
         <p className="text-gray-300">Skontaktuj się z nami telefonicznie</p>
+        <b className="text-gray-300">+48 601 351 699</b>
       </ContactItem>
 
       <ContactItem
@@ -62,6 +63,7 @@ const ContactInfo = () => (
         href="mailto:biuroagmwoodcraft@interia.pl"
       >
         <p className="text-gray-300">Napisz do nas maila</p>
+        <b className="text-gray-300">biuroagmwoodcraft@interia.pl</b>
       </ContactItem>
     </div>
   </div>
