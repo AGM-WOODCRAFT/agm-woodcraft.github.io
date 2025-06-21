@@ -2,13 +2,21 @@ import { Hammer } from "lucide-react";
 import { Menu } from "lucide-react";
 import { X } from "lucide-react";
 
+interface NavigationProps {
+  scrolled: boolean;
+  isMenuOpen: boolean;
+  setIsMenuOpen: (isOpen: boolean) => void;
+  activeSection: string;
+  scrollToSection: (section: string) => void;
+}
+
 const Navigation = ({
   scrolled,
   isMenuOpen,
   setIsMenuOpen,
   activeSection,
   scrollToSection,
-}) => (
+}: NavigationProps) => (
   <nav
     className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       scrolled ? "bg-white/95 backdrop-blur-md shadow-lg" : "bg-transparent"
@@ -47,7 +55,13 @@ const Logo = () => (
 );
 
 // Desktop Menu Component
-const DesktopMenu = ({ activeSection, scrollToSection }) => (
+const DesktopMenu = ({
+  activeSection,
+  scrollToSection,
+}: {
+  activeSection: string;
+  scrollToSection: (section: string) => void;
+}) => (
   <div className="hidden md:flex items-center space-x-8">
     {["home", "uslugi", "galeria", "kontakt"].map((item) => (
       <button
@@ -66,7 +80,13 @@ const DesktopMenu = ({ activeSection, scrollToSection }) => (
 );
 
 // Mobile Menu Button Component
-const MobileMenuButton = ({ isMenuOpen, setIsMenuOpen }) => (
+const MobileMenuButton = ({
+  isMenuOpen,
+  setIsMenuOpen,
+}: {
+  isMenuOpen: boolean;
+  setIsMenuOpen: (isOpen: boolean) => void;
+}) => (
   <button
     className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
     onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -76,7 +96,13 @@ const MobileMenuButton = ({ isMenuOpen, setIsMenuOpen }) => (
 );
 
 // Mobile Menu Component
-const MobileMenu = ({ isMenuOpen, scrollToSection }) =>
+const MobileMenu = ({
+  isMenuOpen,
+  scrollToSection,
+}: {
+  isMenuOpen: boolean;
+  scrollToSection: (section: string) => void;
+}) =>
   isMenuOpen && (
     <div className="md:hidden mt-4 py-4 bg-white/95 backdrop-blur-md rounded-xl shadow-lg">
       {["home", "uslugi", "galeria", "kontakt"].map((item) => (

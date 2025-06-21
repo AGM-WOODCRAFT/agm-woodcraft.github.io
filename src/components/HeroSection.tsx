@@ -1,6 +1,10 @@
 import { TreePine } from "lucide-react";
 
-const HeroSection = ({ scrollToSection }) => (
+const HeroSection = ({
+  scrollToSection,
+}: {
+  scrollToSection: (section: string) => void;
+}) => (
   <section
     id="home"
     className="min-h-screen flex items-center justify-center relative overflow-hidden"
@@ -22,7 +26,11 @@ const BackgroundElements = () => (
   </div>
 );
 
-const HeroContent = ({ scrollToSection }) => (
+const HeroContent = ({
+  scrollToSection,
+}: {
+  scrollToSection: (section: string) => void;
+}) => (
   <>
     <div className="mb-8 animate-fade-in">
       <div className="inline-flex items-center px-4 py-2 bg-amber-100 rounded-full text-amber-800 font-medium mb-6">

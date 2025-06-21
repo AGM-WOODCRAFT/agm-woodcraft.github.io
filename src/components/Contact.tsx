@@ -67,6 +67,15 @@ const ContactInfo = () => (
   </div>
 );
 
+interface ContactItemProps {
+  icon: React.ReactNode;
+  title: string;
+  titleColor: string;
+  bgGradient: string;
+  children: React.ReactNode;
+  href: string;
+}
+
 const ContactItem = ({
   icon,
   title,
@@ -74,7 +83,7 @@ const ContactItem = ({
   bgGradient,
   children,
   href,
-}) => (
+}: ContactItemProps) => (
   <a
     href={href}
     target="_blank"
@@ -106,7 +115,7 @@ const BusinessHours = () => (
   </div>
 );
 
-const HourItem = ({ day, hours }) => (
+const HourItem = ({ day, hours }: { day: string; hours: string }) => (
   <div className="flex justify-between items-center py-3 border-b border-white/20 flex-no-wrap">
     <span className="text-gray-300 text-sm sm:text-base">{day}</span>
     <span className="text-white font-semibold text-sm sm:text-base">

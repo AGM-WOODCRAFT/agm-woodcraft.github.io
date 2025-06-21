@@ -1,6 +1,14 @@
-import SectionHeader from "./SectionHeader"
+import type { JSX } from "react";
+import SectionHeader from "./SectionHeader";
 
-const ServiceCard = ({ service }) => (
+export interface Service {
+  icon: JSX.Element;
+  title: string;
+  description: string;
+  gradient: string;
+}
+
+const ServiceCard = ({ service }: { service: Service }) => (
   <div className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:scale-105">
     <div
       className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
@@ -24,9 +32,9 @@ const ServiceCard = ({ service }) => (
 
     <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-amber-500 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
   </div>
-)
+);
 
-const ServicesSection = ({ services }) => (
+const ServicesSection = ({ services }: { services: Service[] }) => (
   <section
     id="uslugi"
     className="py-20 bg-gradient-to-br from-white to-amber-50"
@@ -44,6 +52,6 @@ const ServicesSection = ({ services }) => (
       </div>
     </div>
   </section>
-)
+);
 
-export default ServicesSection
+export default ServicesSection;
