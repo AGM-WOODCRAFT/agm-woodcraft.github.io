@@ -2,7 +2,7 @@ import { Archive, ChefHat, Home, Sofa, TreePine, Waves } from "lucide-react";
 import { useEffect, useState } from "react";
 import ContactSection from "./components/Contact";
 import Footer from "./components/Footer";
-import Gallery from "./components/Gallery";
+import GallerySection from "./components/GallerySection";
 import HeroSection from "./components/HeroSection";
 import Navigation from "./components/Navigation";
 import ServicesSection from "./components/ServicesSection";
@@ -87,7 +87,7 @@ const AGMWoodcraft = () => {
 
       <HeroSection scrollToSection={scrollToSection} />
       <ServicesSection services={services} />
-      <Gallery />
+      <GallerySection />
       <GoogleMapsSection />
       <ContactSection />
       <Footer />
