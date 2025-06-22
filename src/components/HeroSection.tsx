@@ -32,28 +32,28 @@ const HeroContent = ({
   scrollToSection: (section: string) => void;
 }) => (
   <>
-    <div className="mb-8 animate-fade-in">
+    <div className="mb-8 ">
       <div className="inline-flex items-center px-4 py-2 bg-amber-100 rounded-full text-amber-800 font-medium mb-6">
         <TreePine className="w-4 h-4 mr-2" />
         Rzemiosło Drewniane
       </div>
     </div>
 
-    <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-amber-600 via-orange-600 to-red-600 bg-clip-text text-transparent animate-fade-in delay-200 leading-tight">
+    <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-amber-600 via-orange-600 to-red-600 bg-clip-text text-transparent delay-200 leading-tight">
       AGM WOODCRAFT
     </h1>
 
-    <p className="text-lg sm:text-xl md:text-2xl text-gray-700 mb-6 sm:mb-8 animate-fade-in delay-400 px-4">
+    <p className="text-lg sm:text-xl md:text-2xl text-gray-700 mb-6 sm:mb-8 delay-400 px-4">
       Tworzymy wyjątkowe konstrukcje drewniane z pasją i precyzją
     </p>
 
-    <p className="text-base sm:text-lg text-gray-600 mb-8 sm:mb-12 max-w-2xl mx-auto animate-fade-in delay-600 px-4 leading-relaxed">
+    <p className="text-base sm:text-lg text-gray-600 mb-8 sm:mb-12 max-w-2xl mx-auto delay-600 px-4 leading-relaxed">
       Od saun po domy z drewna, od mebli ogrodowych po szafy - realizujemy
       projekty, które łączą tradycyjne rzemiosło z nowoczesnymi standardami
       jakości.
     </p>
 
-    <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center animate-fade-in delay-800 px-4">
+    <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center delay-800 px-4">
       <button
         onClick={() => scrollToSection("uslugi")}
         className="px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-amber-500 to-orange-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 text-sm sm:text-base"
