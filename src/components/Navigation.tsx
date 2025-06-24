@@ -39,7 +39,12 @@ const Navigation = ({
 
 // Logo Component
 const Logo = () => (
-  <div className="flex items-center">
+  <div
+    onClick={() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }}
+    className="flex items-center"
+  >
     <img src="logo.svg" alt="AGM WOODCRAFT" className="size-20" />
   </div>
 );
