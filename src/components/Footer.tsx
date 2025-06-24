@@ -26,7 +26,7 @@ const Footer = () => (
   <footer className="flex flex-col items-center justify-center bg-text text-accent pb-8 pt-4">
     <div className="container mx-auto px-4 text-center">
       <Logo />
-      <div className="flex flex-row-reverse items-center justify-between">
+      <div className="flex flex-col sm:flex-row-reverse items-center justify-between">
         <div className="flex items-center justify-center gap-4 mb-4">
           <a
             href="#home"
