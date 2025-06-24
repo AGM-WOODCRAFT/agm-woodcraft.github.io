@@ -100,7 +100,7 @@ const GallerySection = () => {
         <div className="max-w-4xl mx-auto mb-8 sm:mb-12 px-4 sm:px-0">
           <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden">
             {/* Mock Image Display */}
-            <div className="relative h-64 sm:h-80 md:h-96 bg-gradient-to-br from-amber-100 to-orange-200 flex items-center justify-center">
+            <div className="relative h-64 sm:h-80 md:h-96 bg-gradient-to-br from-gallery-from to-gallery-to flex items-center justify-center">
               <img
                 src={galleryImages[currentImage].src}
                 alt={galleryImages[currentImage].title}
@@ -114,7 +114,7 @@ const GallerySection = () => {
                     <h3 className="text-lg sm:text-2xl font-bold text-gray-900 mb-2 text-left leading-tight sm:leading-normal">
                       {galleryImages[currentImage].title}
                     </h3>
-                    <span className="inline-block px-3 py-1 bg-amber-500 text-white text-xs leading-tight sm:text-sm rounded-full mb-2 w-fit">
+                    <span className="inline-block px-3 py-1 bg-gallery-accent text-white text-xs leading-tight sm:text-sm rounded-full mb-2 w-fit">
                       {galleryImages[currentImage].category}
                     </span>
                   </div>
@@ -152,7 +152,7 @@ const GallerySection = () => {
                 onClick={() => setCurrentImage(index)}
                 className="group relative bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer transform hover:scale-105 transition-all duration-300"
               >
-                <div className="h-40 sm:h-48 bg-gradient-to-br from-amber-100 via-orange-100 to-red-100 flex items-center justify-center">
+                <div className="h-40 sm:h-48 bg-gradient-to-br from-gallery-from via-gallery-via to-gallery-to flex items-center justify-center">
                   {/* <Image className="w-10 h-10 sm:w-12 sm:h-12 text-amber-600" /> */}
                   <img
                     src={image.src}
@@ -166,7 +166,7 @@ const GallerySection = () => {
                     <h4 className="font-semibold text-gray-800 text-sm sm:text-base truncate">
                       {image.title}
                     </h4>
-                    <span className="text-xs px-2 py-1 bg-amber-100 text-amber-800 rounded-full whitespace-nowrap ml-2">
+                    <span className="text-xs px-2 py-1 bg-gallery-from text-gallery-category rounded-full whitespace-nowrap ml-2">
                       {image.category}
                     </span>
                   </div>
@@ -184,7 +184,7 @@ const GallerySection = () => {
           <div className="flex justify-center items-center w-full px-4 sm:px-0">
             <button
               onClick={() => setIsMoreLoaded(true)}
-              className="w-full cursor-pointer px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-amber-500 to-orange-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 text-sm sm:text-base"
+              className="w-full cursor-pointer px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 text-sm sm:text-base"
             >
               Zobacz Więcej
             </button>

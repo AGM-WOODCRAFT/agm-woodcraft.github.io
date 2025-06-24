@@ -4,10 +4,10 @@ import SectionHeader from "./SectionHeader";
 const GoogleMapsSection = () => (
   <section
     id="uslugi"
-    className="py-20 bg-gradient-to-br from-white to-amber-50"
+    className="py-20 bg-gradient-to-br from-surface to-primary/5"
   >
     <div className="container flex flex-col items-center justify-center mx-auto px-4">
-      <div className="inline-flex items-center px-4 py-2 bg-amber-100 rounded-full text-amber-800 font-medium mb-8">
+      <div className="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full text-primary font-medium mb-8">
         <MapPin className="w-4 h-4 mr-2" />
         Nasza Lokalizacja
       </div>
@@ -22,11 +22,11 @@ const GoogleMapsSection = () => (
 
 const MapContainer = () => (
   <div className="animate-fade-in delay-400 w-full">
-    <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-xl border border-amber-100 h-full">
+    <div className="bg-accent/80 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-xl border border-primary/10 h-full">
       <div className="h-[30rem] sm:h-[40rem] w-full shadow-sm rounded-lg overflow-hidden">
         <Map />
       </div>
-      <div className="mt-4 flex items-center justify-between text-sm text-gray-500">
+      <div className="mt-4 flex items-center justify-between text-sm text-muted">
         <span>AGM Woodcraft</span>
         <span className="flex items-center">
           <MapPin className="w-4 h-4 mr-1" />
