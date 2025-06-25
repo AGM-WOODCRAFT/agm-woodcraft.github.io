@@ -5,7 +5,7 @@ const Logo = () => (
     onClick={() => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }}
-    className="flex items-center justify-center"
+    className="flex items-center justify-center cursor-pointer"
   >
     <img src="logoWhite.svg" alt="AGM WOODCRAFT" className="size-20" />
   </div>
